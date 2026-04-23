@@ -1,2 +1,2 @@
-# ucv-ate-sistemasInteligentes-lab03
+# ucv-ate-si-lab03
 Laboratorio 03 - Análisis de Patrones
