@@ -1,0 +1,41 @@
+[project]
+name = "laboratorio3-kedro"
+version = "0.1.0"
+description = "Laboratorio 03 Kedro - Analisis de patrones con POO"
+readme = "README.md"
+authors = [
+    { name = "Fadiley Chipana", email = "fchipanaca1@ucvvirtual.edu.pe" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "kedro>=1.3.1,<2.0.0",
+    "kedro-datasets>=9.3.0,<10.0.0",
+    "opencv-python>=4.0.0,<5.0.0",
+    "numpy>=1.26.0,<3.0.0",
+    "matplotlib>=3.8.0,<4.0.0"
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0,<10.0.0"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+packages = [{ include = "laboratorio3_kedro", from = "src" }]
+
+[tool.kedro]
+package_name = "laboratorio3_kedro"
+project_name = "Laboratorio 3 Kedro"
+kedro_init_version = "1.3.1"
+source_dir = "src"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+norecursedirs = ["laboratorio-3-kedro", ".venv", ".pytest_cache", "__pycache__"]
+
+[tool.kedro_telemetry]
+project_id = "5e687b41743644c89ffb2a3fcc57c2be"
